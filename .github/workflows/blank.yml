@@ -14,13 +14,13 @@ jobs:
       # ...
       - name: "Build & test"
         run: |
-          if: "failure()"
           echo "done!"
       - uses: actions/upload-artifact@v3
         if: success()
         with:
           name: my-artifact
           path: path/to/artifact/
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
