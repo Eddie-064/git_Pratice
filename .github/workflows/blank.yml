@@ -30,7 +30,7 @@ jobs:
             
           # Pass some environment variables to the container
           env: | # YAML, but pipe character is necessary
-            artifact_name: git-${{ matrix.distro }}_${{ matrix.arch }}
+            artifact_name: git-ubuntu18.04_aarch64
 
           # The shell to run commands with in the container
           shell: /bin/bash
