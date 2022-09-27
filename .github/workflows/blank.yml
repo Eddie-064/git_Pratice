@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "done!"
       - uses: actions/upload-artifact@v3
-        if: success()
+        if: failure()
         with:
           name: my-artifact
           path: path/to/artifact/
