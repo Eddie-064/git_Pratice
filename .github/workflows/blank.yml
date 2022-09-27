@@ -38,7 +38,8 @@ jobs:
           # publicly in your project's package repository, so it is vital that
           # no secrets are present in the container state or logs.
           install: |
-            apt-get install -y libev-dev cmake libdrm-dev unzip libghc-x11-dev gcc g++ dkms libusb-1.0-0-dev
+            apt-get update -q -y
+            apt-get install -y git libev-dev cmake libdrm-dev unzip libghc-x11-dev gcc g++ dkms libusb-1.0-0-dev
 
           # Produce a binary artifact and place it in the mounted volume
           run: |
